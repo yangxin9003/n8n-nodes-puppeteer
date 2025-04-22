@@ -31,10 +31,7 @@ docker build -t n8n-puppeteer -f docker/Dockerfile docker/
 
 3. Run the container:
 ```bash
-docker run -it \
-  -p 5678:5678 \
-  -v ~/.n8n:/home/node/.n8n \
-  n8n-puppeteer
+docker run -d --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8n-puppeteer
 ```
 
 ### Manual Installation
